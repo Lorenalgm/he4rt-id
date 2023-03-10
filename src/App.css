@@ -1,38 +1,127 @@
-.App {
-  text-align: center;
+.container{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.card_container{
+    width: 60em;
+    height: 100%;
+    background-image: url('./assets/background.png');
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-size: cover;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.card_front, .card_back {
+    border-radius: 1.4em;
+    border: 2px solid var(--primary-color);
+    width: 25em;
+    height: 37em;
+    backdrop-filter: blur(5px);
+    /* box-shadow: var(--details-color) 0px 25px 50px -18px;  */
+    /* transition: transform 1s ease 0s; */
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+/* .card_front:hover{
+    transform: perspective(1500px) rotateY(20deg);
+} */
+
+.card_header{
+    padding: 0 1.5em;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    border-bottom: 2px solid var(--primary-color);
 }
 
-.App-link {
-  color: #61dafb;
+.card_body{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    align-items: center;
+    text-align: center;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.avatar{
+    z-index: 1;
+    position: relative;
+    top: 3em;
+    width: 20em;
+}
+
+.card_infos{
+    position: fixed;
+    z-index: 2;
+    bottom: 2em;
+    width: 100%;
+    height: 62%;
+    bottom: 2px;
+    border-radius: 1.4em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background: linear-gradient(to top, rgba(0, 0, 0, 1) 30%, rgba(0, 0, 0, 0) 90%);
+
+}
+
+.card_infos h3{
+    color: var(--primary-color);
+}
+
+.flip-card {
+    background-color: transparent;
+    width: 25em;
+    height: 37em;
+    perspective: 1000px;
+}
+  
+.flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 1s ease 0s;
+    transform-style: preserve-3d;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+}
+
+.flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+}
+
+.card_front, .card_back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+
+.card_back {
+    transform: rotateY(180deg);
+}
+
+.card_back .card_body{
+    display: flex;
+    padding: 1.5em;
+    height: 90%;
+    justify-content: space-between;
+}
+
+.card_back h3{
+    font-weight: normal;
+}
+
+.card_back .card_body h3,
+    .card_back .card_body h1 {
+    margin-bottom: 1em;
+}
+
+.card_back .card_body div{
+    text-align: left;
+    width: 100%;
 }
