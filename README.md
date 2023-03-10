@@ -17,7 +17,7 @@ Iremos criar a sua carteirinha de membro na comunidade da He4rt!
 
 - Criar um componente de card para não repetir código para a parte da frente e de trás do card
 - Gere o avatar do usuário utilizando a api do readyplayer
-    - (Clique aqui para ver a documentação)[https://docs.readyplayer.me/ready-player-me/integration-guides/web-and-native-integration/avatar-creator-integration]
+    - [Clique aqui para ver a documentação](https://docs.readyplayer.me/ready-player-me/integration-guides/web-and-native-integration/avatar-creator-integration)
 - Formulário para gerar as informações do card dinamicamente:
     - Crie um formulário pedindo o cargo, github e linkedin da pessoa.
     - Ao clicar em enviar, utilize o usuário para se conectar na api do github e coletar o nome, foto e bio.
@@ -31,6 +31,5 @@ Iremos criar a sua carteirinha de membro na comunidade da He4rt!
 
 ## Links de apoio
 
-Protótipo no Figma:
-https://www.figma.com/file/O9UmZmtKpoXachbnEQwcVV/he4rtId?node-id=0%3A1&t=vIT9IXXeCJKskRZu-1
+[Protótipo no Figma](https://www.figma.com/file/O9UmZmtKpoXachbnEQwcVV/he4rtId?node-id=0%3A1&t=vIT9IXXeCJKskRZu-1)
 
